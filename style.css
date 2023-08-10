@@ -95,7 +95,7 @@ margin: 20px 0;
 }
 
 .selecionado {
-    border: 3px solid #32B72F;
+    border: 3px solid #50D074;
 }
 
 .check{
@@ -133,4 +133,68 @@ footer button {
 
 .hidden {
     display: none;
+}
+
+.botaoSelecionado {
+    background-color: #50D074;
+    cursor: pointer;
+}
+
+.confirmarPedido {
+    background-color: #50D074;
+    font-family: 'Roboto';
+    color: white;
+    width: 377px;
+    height: 353px;
+    border-radius: 10px;
+    padding: 20px;
+    position: fixed;
+    top: 25%;
+    left: 15%;
+}
+
+.botaoCancela {
+    font-weight: 700;
+    font-size: 20px;
+
+}
+
+.confirmaBotoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.botaoConfirma {
+    width: 329px;
+    height: 52px;
+    border-radius: 100px;
+    border: none;
+    background-color: white;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: #50D074;
+}
+
+.pedidoTitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.itemPedido{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.itensPedidos {
+    display: flex;
+    flex-direction: column;
 }
