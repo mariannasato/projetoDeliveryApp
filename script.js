@@ -60,7 +60,17 @@ function selecionarSobremesa(opcaoSelecionada){
     }
 }
 
-function confirmarPedido() {
+function confirmarPedido(pratoTitulo) {
+    if (i == 3) {
     const telaConfirmar = document.querySelector(".confirmarPedido")
     telaConfirmar.classList.remove("hidden");
+
+    const tituloPrato = document.querySelector(".itemPedido p")
+    tituloPrato.innerHTML = pratoTitulo
+    }
+}
+
+function cancela() {
+    const telaConfirmar = document.querySelector(".confirmarPedido")
+    telaConfirmar.classList.add("hidden");
 }

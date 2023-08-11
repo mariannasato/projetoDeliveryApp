@@ -21,34 +21,34 @@
                 <h1>Primeiro, seu prato</h1>
             </div>
             <div class="selecao-container">
-                <div class="opcao prato" onclick="selecionarPrato(this)">
+                <div class="opcao prato" onclick="selecionarPrato(this), confirmarPedido(this)">
                     <img src="images/checkmark.png" class="check hidden">
                     <img src="images/frango_yin_yang 1.png">
-                    <h1>Frango Yin Yang</h1>
+                    <h1>Prato Giga</h1>
                     <p>Um pouco de batata<br>um pouco de salada</p>
                     <h2>R$ 14,90</h2>
                 </div>
 
-                <div class="opcao prato" onclick="selecionarPrato(this)">
+                <div class="opcao prato" onclick="selecionarPrato(this), confirmarPedido(this)">
                     <img src="images/checkmark.png" class="check hidden">
                     <img src="images/frango_yin_yang 1.png">
-                    <h1>Frango Yin Yang</h1>
+                    <h1>Tropeirão Nutritivo</h1>
                     <p>Um pouco de batata<br>um pouco de salada</p>
                     <h2>R$ 14,90</h2>
                 </div>
 
-                <div class="opcao prato" onclick="selecionarPrato(this)">
+                <div class="opcao prato" onclick="selecionarPrato(this), confirmarPedido(this)">
                     <img src="images/checkmark.png" class="check hidden">
                     <img src="images/frango_yin_yang 1.png">
-                    <h1>Frango Yin Yang</h1>
+                    <h1>Giga Vegano</h1>
                     <p>Um pouco de batata<br>um pouco de salada</p>
                     <h2>R$ 14,90</h2>
                 </div>
                 
-                <div class="opcao prato" onclick="selecionarPrato(this)">
+                <div class="opcao prato" onclick="selecionarPrato(this), confirmarPedido(this)">
                     <img src="images/checkmark.png" class="check hidden">
                     <img src="images/frango_yin_yang 1.png">
-                    <h1>Frango Yin Yang</h1>
+                    <h1>Prato Bulking</h1>
                     <p>Um pouco de batata<br>um pouco de salada</p>
                     <h2>R$ 14,90</h2>
                 </div>
@@ -63,7 +63,7 @@
                 <div class="opcao bebida" onclick="selecionarBebida(this)">
                     <img src="images/checkmark.png" class="check hidden">
                     <img src="images/coquinha_gelada 1.png">
-                    <h1>Coquinha gelada</h1>
+                    <h1>Água Mineral</h1>
                     <p>Lata 350ml</p>
                     <h2>R$ 4,90</h2>
                 </div>
@@ -71,7 +71,7 @@
                 <div class="opcao bebida" onclick="selecionarBebida(this)">
                     <img src="images/checkmark.png" class="check hidden">
                     <img src="images/coquinha_gelada 1.png">
-                    <h1>Coquinha gelada</h1>
+                    <h1>Shake Fábio G.</h1>
                     <p>Lata 350ml</p>
                     <h2>R$ 4,90</h2>
                 </div>
@@ -79,7 +79,7 @@
                 <div class="opcao bebida" onclick="selecionarBebida(this)">
                     <img src="images/checkmark.png" class="check hidden">
                     <img src="images/coquinha_gelada 1.png">
-                    <h1>Coquinha gelada</h1>
+                    <h1>Suco 100% Natty</h1>
                     <p>Lata 350ml</p>
                     <h2>R$ 4,90</h2>
                 </div>
@@ -87,7 +87,7 @@
                 <div class="opcao bebida" onclick="selecionarBebida(this)">
                     <img src="images/checkmark.png" class="check hidden">
                     <img src="images/coquinha_gelada 1.png">
-                    <h1>Coquinha gelada</h1>
+                    <h1>Pré-T da Haze</h1>
                     <p>Lata 350ml</p>
                     <h2>R$ 4,90</h2>
                 </div>
@@ -102,7 +102,7 @@
                 <div class="opcao sobremesa" onclick="selecionarSobremesa(this)">
                     <img src="images/checkmark.png" class="check hidden">
                     <img src="images/pudim 1.png">
-                    <h1>Pudim</h1>
+                    <h1>Smoothie Proteina</h1>
                     <p>Apenas pudim</p>
                     <h2>R$ 7,90</h2>
                 </div>
@@ -110,7 +110,7 @@
                 <div class="opcao sobremesa" onclick="selecionarSobremesa(this)">
                     <img src="images/checkmark.png" class="check hidden">
                     <img src="images/pudim 1.png">
-                    <h1>Pudim</h1>
+                    <h1>Oatmeal Banana</h1>
                     <p>Apenas pudim</p>
                     <h2>R$ 7,90</h2>
                 </div>
@@ -118,7 +118,7 @@
                 <div class="opcao sobremesa" onclick="selecionarSobremesa(this)">
                     <img src="images/checkmark.png" class="check hidden">
                     <img src="images/pudim 1.png">
-                    <h1>Pudim</h1>
+                    <h1>Low-Cal Cookies</h1>
                     <p>Apenas pudim</p>
                     <h2>R$ 7,90</h2>
                 </div>
@@ -126,7 +126,7 @@
                 <div class="opcao sobremesa" onclick="selecionarSobremesa(this)">
                     <img src="images/checkmark.png" class="check hidden">
                     <img src="images/pudim 1.png">
-                    <h1>Pudim</h1>
+                    <h1>Pós-T Banana</h1>
                     <p>Apenas pudim</p>
                     <h2>R$ 7,90</h2>
                 </div>
@@ -153,14 +153,14 @@
          </div>
 
          <div class="itemPedido">
-            <p>Total</p>
-            <p>R$ 27,70</p>
+            <strong>Total</strong>
+            <strong>R$ 27,70</strong>
          </div>
          </div>
 
          <div class="confirmaBotoes">
-            <button class="botaoConfirma">Tudo certo, pode pedir!</button>
-            <h2 class="botaoCancela">Cancelar</h2>
+           <a href="www.youtube.com"><button class="botaoConfirma">Tudo certo, pode pedir!</button></a>
+            <h2 class="botaoCancela" onclick="cancela()">Cancelar</h2>
         </div>
         </div>
 
