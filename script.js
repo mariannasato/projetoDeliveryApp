@@ -33,6 +33,11 @@ function selecionarBebida(opcaoSelecionada){
 
     opcaoSelecionada.classList.add("selecionado");
 
+    const checkGeral = document.querySelector(".bebida img.check")
+    checkGeral.classList.add("hidden")
+    const checkmark = document.querySelector(".bebida.selecionado img.check")
+    checkmark.classList.remove("hidden")
+
     i = i + 1
 
     if (i == 3){
@@ -53,6 +58,11 @@ function selecionarSobremesa(opcaoSelecionada){
     }
 
     opcaoSelecionada.classList.add("selecionado");
+
+    const checkGeral = document.querySelector(".sobremesa img.check")
+    checkGeral.classList.add("hidden")
+    const checkmark = document.querySelector(".sobremesa.selecionado img.check")
+    checkmark.classList.remove("hidden")
 
     i = i + 1
 
