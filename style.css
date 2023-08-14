@@ -68,6 +68,10 @@ margin: 20px 0;
     cursor: pointer;
 }
 
+.opcao:last-child{
+    margin-right: 60px;
+}
+
 .opcao img:nth-child(2) {
     width: 144px;
     height: 87px;
@@ -149,8 +153,9 @@ footer button {
     border-radius: 10px;
     padding: 20px;
     position: fixed;
-    top: 25%;
-    left: 15%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
 }
 
 .botaoCancela {
