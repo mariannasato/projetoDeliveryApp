@@ -73,6 +73,7 @@ margin: 20px 0;
 }
 
 .opcao img:nth-child(2) {
+    object-fit: cover;
     width: 144px;
     height: 87px;
     border-radius: 4px;

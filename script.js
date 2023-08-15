@@ -7,12 +7,11 @@ function selecionarPrato(opcaoSelecionada){
         i = i - 1
     }
     
-
     opcaoSelecionada.classList.add("selecionado");
 
-    const checkGeral = document.querySelector(".prato img.check")
+    const checkGeral = document.querySelectorAll(".prato img.check")
     checkGeral.classList.add("hidden")
-    const checkmark = document.querySelector(".prato.selecionado img.check")
+    const checkmark = document.querySelector(".prato.selecionado img")
     checkmark.classList.remove("hidden")
 
     i = i + 1
@@ -48,8 +47,6 @@ function selecionarBebida(opcaoSelecionada){
 
     }
 
-
-
 function selecionarSobremesa(opcaoSelecionada){
     const botaoClicado = document.querySelector(".sobremesa.selecionado")
     if (botaoClicado !== null){
@@ -80,34 +77,28 @@ function confirmarPedido() {
     telaConfirmar.classList.remove("hidden");
 
     const pratoTitulo = document.querySelector(".prato.selecionado h1");
-    const confirmarPrato = document.querySelector(".itemPedido h1")
-    confirmarPrato.innerHTML = pratoTitulo.innerHTML;
+    const confirmarPrato = document.querySelector(".itemPedido h1").innerHTML = pratoTitulo.innerHTML;
 
     const pratoPreco = document.querySelector(".prato.selecionado h2");
-    const confirmarPratoPreco = document.querySelector(".itemPedido p")
-    confirmarPratoPreco.innerHTML = pratoPreco.innerHTML;
+    const confirmarPratoPreco = document.querySelector(".itemPedido p").innerHTML = pratoPreco.innerHTML;
 
     const bebidaTitulo = document.querySelector(".bebida.selecionado h1");
-    const confirmarBebida = document.querySelector(".itemPedido.bebida h1");
-    confirmarBebida.innerHTML = bebidaTitulo.innerHTML;
+    const confirmarBebida = document.querySelector(".itemPedido.bebida h1").innerHTML = bebidaTitulo.innerHTML;
 
     const bebidaPreco = document.querySelector(".bebida.selecionado h2");
-    const confirmarBebidaPreco = document.querySelector(".itemPedido.bebida p")
-    confirmarBebidaPreco.innerHTML = bebidaPreco.innerHTML;
+    const confirmarBebidaPreco = document.querySelector(".itemPedido.bebida p").innerHTML = bebidaPreco.innerHTML;
 
     const sobremesaTitulo = document.querySelector(".sobremesa.selecionado h1");
-    const confirmarSobremesa = document.querySelector(".itemPedido.sobremesa h1");
-    confirmarSobremesa.innerHTML = sobremesaTitulo.innerHTML;
+    const confirmarSobremesa = document.querySelector(".itemPedido.sobremesa h1").innerHTML = sobremesaTitulo.innerHTML;
 
     const sobremesaPreco = document.querySelector(".sobremesa.selecionado h2");
-    const confirmarSobremesaPreco = document.querySelector(".itemPedido.sobremesa p")
-    confirmarSobremesaPreco.innerHTML = sobremesaPreco.innerHTML;
+    const confirmarSobremesaPreco = document.querySelector(".itemPedido.sobremesa p").innerHTML = sobremesaPreco.innerHTML;
 
     const pedidoTotal = document.querySelector(".itemPedido.total p");
     valorTotal =  Number((parseInt(pratoPreco.innerHTML.replace(/\D/g, "")))+(parseInt(bebidaPreco.innerHTML.replace(/\D/g, "")))+(parseInt(sobremesaPreco.innerHTML.replace(/\D/g, ""))))
     pedidoTotal.innerHTML = "R$ "+ valorTotal
 
-    // const fundoCinza = document.querySelector("body").classList.toggle("fundoCinza");
+    const fundoCinza = document.querySelector("body").classList.toggle("fundoCinza");
     }
 }
 
