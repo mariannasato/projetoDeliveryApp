@@ -1,22 +1,20 @@
-let i = 0;
+let optionsCounter = 0;
 
 function selecionarPrato(opcaoSelecionada){
     const botaoClicado = document.querySelector(".prato.selecionado")
     if (botaoClicado !== null){
         botaoClicado.classList.remove("selecionado");
-        i = i - 1
+        optionsCounter = optionsCounter - 1
     }
     
     opcaoSelecionada.classList.add("selecionado");
 
-    const checkGeral = document.querySelectorAll(".prato img.check")
-    checkGeral.classList.add("hidden")
-    const checkmark = document.querySelector(".prato.selecionado img")
-    checkmark.classList.remove("hidden")
+    const checkGeral = document.getElementsByClassName("check")
+    const checkmark = document.querySelector(".prato.selecionado img").classList.remove("hidden")
 
-    i = i + 1
+    optionsCounter = optionsCounter + 1
 
-    if (i == 3){
+    if (optionsCounter == 3){
         const finalizarPedido = document.querySelector("footer button");
         finalizarPedido.innerHTML = "Fechar Pedido"
         finalizarPedido.classList.add("botaoSelecionado")
@@ -27,7 +25,7 @@ function selecionarBebida(opcaoSelecionada){
     const botaoClicado = document.querySelector(".bebida.selecionado")
     if (botaoClicado !== null){
         botaoClicado.classList.remove("selecionado");
-        i = i - 1
+        optionsCounter = optionsCounter - 1
     }
 
     opcaoSelecionada.classList.add("selecionado");
@@ -37,9 +35,9 @@ function selecionarBebida(opcaoSelecionada){
     const checkmark = document.querySelector(".bebida.selecionado img.check")
     checkmark.classList.remove("hidden")
 
-    i = i + 1
+    optionsCounter = optionsCounter + 1
 
-    if (i == 3){
+    if (optionsCounter == 3){
         const finalizarPedido = document.querySelector("footer button");
         finalizarPedido.innerHTML = "Fechar Pedido"
         finalizarPedido.classList.add("botaoSelecionado")
@@ -51,7 +49,7 @@ function selecionarSobremesa(opcaoSelecionada){
     const botaoClicado = document.querySelector(".sobremesa.selecionado")
     if (botaoClicado !== null){
         botaoClicado.classList.remove("selecionado");
-        i = i - 1
+        optionsCounter = optionsCounter - 1
     }
 
     opcaoSelecionada.classList.add("selecionado");
@@ -61,9 +59,9 @@ function selecionarSobremesa(opcaoSelecionada){
     const checkmark = document.querySelector(".sobremesa.selecionado img.check")
     checkmark.classList.remove("hidden")
 
-    i = i + 1
+    optionsCounter = optionsCounter + 1
 
-    if (i == 3){
+    if (optionsCounter == 3){
         const finalizarPedido = document.querySelector("footer button");
         finalizarPedido.innerHTML = "Fechar Pedido"
         finalizarPedido.classList.add("botaoSelecionado")
@@ -72,7 +70,7 @@ function selecionarSobremesa(opcaoSelecionada){
 
 
 function confirmarPedido() {
-    if (i == 3) {
+    if (optionsCounter == 3) {
     const telaConfirmar = document.querySelector(".confirmarPedido")
     telaConfirmar.classList.remove("hidden");
 

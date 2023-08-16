@@ -22,7 +22,7 @@
     font-size: 44px;
 }
 
-.titulo p {
+.titulo p,  footer button, .opcao, .confirmarPedido, .botaoConfirma {
     font-family: 'Roboto';
 }
 
@@ -33,16 +33,10 @@ body {
     overflow-x: hidden;
 }
 
-.selecao {
-margin: 20px 0;
-}
-
-.selecao-titulo {
+.selecao-titulo{
     font-size: 26px;
     color: #333333;
-    position: sticky;
-    top: 0;
-    left: 0;
+    margin-top: 20px;
 }
 
 .selecao-container {
@@ -50,8 +44,6 @@ margin: 20px 0;
     width: 100vw;
     display: inline-flex;
     overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
 }
 
 .opcao {
@@ -61,15 +53,13 @@ margin: 20px 0;
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0px 0px 10px -4px #00000040;
-    font-family: 'Roboto';
     font-size: 16px;
     padding: 15px;
     position: relative;
-    cursor: pointer;
 }
 
 .opcao:last-child{
-    margin-right: 60px;
+    margin-right: 40px;
 }
 
 .opcao img:nth-child(2) {
@@ -91,7 +81,6 @@ margin: 20px 0;
     color: #a6a6a6;
     font-size: 15px;
     margin: 9px 0;
-    word-wrap: break-word;
 }
 
 .opcao h2 {
@@ -130,7 +119,6 @@ footer button {
     border-radius: 50px;
     border: none;
     color: #ffffff;
-    font-family: 'Roboto';
     font-weight: 400;
     font-size: 20px;
     z-index: 1;
@@ -140,14 +128,11 @@ footer button {
     display: none;
 }
 
-.botaoSelecionado {
+.botaoSelecionado, .confirmarPedido{
     background-color: #50D074;
-    cursor: pointer;
 }
 
 .confirmarPedido {
-    background-color: #50D074;
-    font-family: 'Roboto';
     color: white;
     width: 377px;
     height: 353px;
@@ -159,15 +144,13 @@ footer button {
     transform: translate(-50%, -50%);    
 }
 
-.botaoCancela {
+.botaoCancela, strong {
     font-weight: 700;
     font-size: 20px;
-
 }
 
 .confirmaBotoes{
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -180,17 +163,13 @@ footer button {
     background-color: white;
     text-align: center;
     font-size: 18px;
-    font-family: 'Roboto';
     font-weight: 700;
     color: #50D074;
     margin: 10px 0;
-    cursor: pointer;
 }
 
 .pedidoTitulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -209,10 +188,6 @@ footer button {
     flex-direction: column;
 }
 
-strong {
-    font-weight: 700;
-}
-
-.botaoCancela {
+.botaoCancela, .botaoConfirma, .botaoSelecionado, .opcao {
     cursor: pointer;
 }
