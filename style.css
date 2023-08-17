@@ -92,7 +92,7 @@ body {
     border: 3px solid #50D074;
 }
 
-.check{
+.pratocheck, .bebidacheck, .sobremesacheck{
     width: 19px;
     height: 19px;
     position: absolute;

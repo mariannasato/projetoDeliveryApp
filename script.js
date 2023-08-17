@@ -9,7 +9,7 @@ function selecionarPrato(opcaoSelecionada){
     
     opcaoSelecionada.classList.add("selecionado");
 
-    const checkGeral = document.getElementsByClassName("check")
+    Array.from( checkGeral = document.getElementsByClassName("pratocheck")).forEach(Element => Element.classList.add("hidden"))
     const checkmark = document.querySelector(".prato.selecionado img").classList.remove("hidden")
 
     optionsCounter = optionsCounter + 1
@@ -30,10 +30,8 @@ function selecionarBebida(opcaoSelecionada){
 
     opcaoSelecionada.classList.add("selecionado");
 
-    const checkGeral = document.querySelector(".bebida img.check")
-    checkGeral.classList.add("hidden")
-    const checkmark = document.querySelector(".bebida.selecionado img.check")
-    checkmark.classList.remove("hidden")
+    Array.from( checkGeral = document.getElementsByClassName("bebidacheck")).forEach(Element => Element.classList.add("hidden"))
+    const checkmark = document.querySelector(".bebida.selecionado img").classList.remove("hidden")
 
     optionsCounter = optionsCounter + 1
 
@@ -54,10 +52,8 @@ function selecionarSobremesa(opcaoSelecionada){
 
     opcaoSelecionada.classList.add("selecionado");
 
-    const checkGeral = document.querySelector(".sobremesa img.check")
-    checkGeral.classList.add("hidden")
-    const checkmark = document.querySelector(".sobremesa.selecionado img.check")
-    checkmark.classList.remove("hidden")
+    Array.from( checkGeral = document.getElementsByClassName("sobremesacheck")).forEach(Element => Element.classList.add("hidden"))
+    const checkmark = document.querySelector(".sobremesa.selecionado img").classList.remove("hidden")
 
     optionsCounter = optionsCounter + 1
 
@@ -94,7 +90,7 @@ function confirmarPedido() {
 
     const pedidoTotal = document.querySelector(".itemPedido.total p");
     valorTotal =  Number((parseInt(pratoPreco.innerHTML.replace(/\D/g, "")))+(parseInt(bebidaPreco.innerHTML.replace(/\D/g, "")))+(parseInt(sobremesaPreco.innerHTML.replace(/\D/g, ""))))
-    pedidoTotal.innerHTML = "R$ "+ valorTotal
+    pedidoTotal.innerHTML = "R$ "+ valorTotal.toString().replace(/\B(?=(\d{2})+(?!\d))/g, ",");
 
     const fundoCinza = document.querySelector("body").classList.toggle("fundoCinza");
     }
